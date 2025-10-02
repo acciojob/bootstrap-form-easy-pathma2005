@@ -7,71 +7,76 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-
-	<div class="container mt-5">
+<div class="container mt-5">
   <h2 class="text-center mb-4">Internship Form</h2>
 
   <form id="internship-form" novalidate>
-    <!-- all your form rows go here -->
+    <!-- Row 1 -->
+    <div class="form-row mb-3 d-flex gap-3">
+      <div class="form-group flex-fill">
+        <label for="first-name-input" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="first-name-input" required>
+        <div class="invalid-feedback">First name required!</div>
+      </div>
+
+      <div class="form-group flex-fill">
+        <label for="last-name-input" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="last-name-input" required>
+        <div class="invalid-feedback">Last name required!</div>
+      </div>
+
+      <div class="form-group flex-fill">
+        <label for="email-input" class="form-label">Email Address</label>
+        <input type="email" class="form-control" id="email-input" required>
+        <div class="invalid-feedback">Email required!</div>
+      </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="form-row mb-3 d-flex gap-3">
+      <!-- College -->
+      <div class="form-group flex-fill" style="flex: 2;">
+        <label for="college-input" class="form-label">College</label>
+        <input type="text" class="form-control" id="college-input" required>
+        <div class="invalid-feedback">Please provide a valid college.</div>
+      </div>
+
+      <!-- Graduation Year -->
+      <div class="form-group flex-fill" style="flex: 1;">
+        <label for="grad-year-select" class="form-label">Graduation Year</label>
+        <select class="form-select" id="grad-year-select" required>
+          <option value="" disabled selected>Choose...</option>
+          <option value="2020">2020</option>
+          <option value="2021">2021</option>
+          <option value="2022">2022</option>
+          <option value="2023">2023</option>
+        </select>
+        <div class="invalid-feedback">Please select a valid Graduation Year.</div>
+      </div>
+
+      <!-- Roll No. -->
+      <div class="form-group flex-fill" style="flex: 1;">
+        <label for="roll-no-input" class="form-label">Roll No.</label>
+        <input type="text" class="form-control" id="roll-no-input" required>
+        <div class="invalid-feedback">Please provide a valid Roll no.</div>
+      </div>
+    </div>
+
+    <!-- Terms and Conditions -->
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="conditions-checkbox" required>
+      <label class="form-check-label" for="conditions-checkbox">Agree to terms and conditions</label>
+      <div class="invalid-feedback">You must agree before submitting.</div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit form</button>
   </form>
 </div>
 
-	<div class="form-row mb-3" style="display: flex; gap: 10px;">
-  <div class="form-group flex-fill">
-    <label for="first-name-input" class="form-label">First Name</label>
-    <input type="text" class="form-control" id="first-name-input" required>
-    <div class="invalid-feedback">First name required!</div>
-  </div>
-  <div class="form-group flex-fill">
-    <label for="last-name-input" class="form-label">Last Name</label>
-    <input type="text" class="form-control" id="last-name-input" required>
-    <div class="invalid-feedback">Last name required!</div>
-  </div>
-  <div class="form-group flex-fill">
-    <label for="email-input" class="form-label">Email Address</label>
-    <input type="email" class="form-control" id="email-input" required>
-    <div class="invalid-feedback">Email required!</div>
-  </div>
-</div>
-<div class="form-row mb-3" style="display: flex; gap: 10px;">
-  <!-- College -->
-  <div class="form-group flex-fill" style="flex: 2;">
-    <label for="college-input" class="form-label">College</label>
-    <input type="text" class="form-control" id="college-input" required>
-    <div class="invalid-feedback">Please provide a valid college.</div>
-  </div>
-
-  <!-- Graduation Year -->
-  <div class="form-group flex-fill" style="flex: 1;">
-    <label for="grad-year-select" class="form-label">Graduation Year</label>
-    <select class="form-select" id="grad-year-select" required>
-      <option value="" disabled selected>Choose...</option>
-      <option value="2020">2020</option>
-      <option value="2021">2021</option>
-      <option value="2022">2022</option>
-      <option value="2023">2023</option>
-    </select>
-    <div class="invalid-feedback">Please select a valid Graduation Year.</div>
-  </div>
-
-  <!-- Roll No. -->
-  <div class="form-group flex-fill" style="flex: 1;">
-    <label for="roll-no-input" class="form-label">Roll No.</label>
-    <input type="text" class="form-control" id="roll-no-input" required>
-    <div class="invalid-feedback">Please provide a valid Roll no.</div>
-  </div>
-</div>
-	<!-- Terms and Conditions Checkbox -->
-<div class="mb-3 form-check">
-  <input type="checkbox" class="form-check-input" id="conditions-checkbox" required>
-  <label class="form-check-label" for="conditions-checkbox">Agree to terms and conditions</label>
-  <div class="invalid-feedback">
-    You must agree before submitting.
-  </div>
-</div>
-<button type="submit" class="btn btn-primary">Submit form</button>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="./script.js">
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./script.js"></script>
+<script type="text/javascript" src="./script.js">
 </script>
 
 </body>
