@@ -1,2 +1,13 @@
+ .form-row {
+            display: flex;
+            gap: 10px; /* Space between fields */
+        }
 
-/* Your CSS Code here. */
+        .form-row .form-group {
+            flex: 1; /* Ensure equal width */
+        }
+
+        /* Remove any margin on the last element to keep them aligned */
+        .form-row .form-group:last-child {
+            margin-right: 0;
+        }
